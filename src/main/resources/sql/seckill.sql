@@ -2,7 +2,8 @@
 SQLyog 企业版 - MySQL GUI v8.14 
 MySQL - 5.7.17-log : Database - seckill
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -13,6 +14,12 @@ MySQL - 5.7.17-log : Database - seckill
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 /*Table structure for table `seckill` */
+
+drop database IF EXISTS `seckill` ;
+
+create database seckill;
+
+use seckill;
 
 DROP TABLE IF EXISTS `seckill`;
 
