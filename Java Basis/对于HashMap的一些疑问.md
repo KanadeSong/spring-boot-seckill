@@ -7,7 +7,7 @@
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2018/0830/173144_4d97d72f_87650.png "2.png")
 
-#### 一、HashMap的resize过程是什么样的？
+#### 一、HashMap的resize过程是什么样的？a
 
 HashMap在put的时候会先检查当前数组的length,如果插入新的值的时候使得length > 0.75f * size（f 为加载因子，可以在创建hashMap时指定）的话，会将数组进行扩容为当前容量的2倍。 扩容之后必定要将原有hashMap 中的值拷贝到新容量的hashMap 里面，HashMap 默认的容量为16，加载因子为0.75， 也就是说当HashMap 中Entry的个数超过 16 * 0.75 = 12时, 会将容量扩充为 16 * 2 = 32，然后重新计算元素在数组中的位置，这是一个非常耗时的操作，所以我们在使用HashMap的时候如果能预先知道Map中元素的大小，预设其大小能够提升其性能。 resize代码：
 
