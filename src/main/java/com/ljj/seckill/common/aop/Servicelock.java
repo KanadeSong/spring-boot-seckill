@@ -9,9 +9,9 @@ import java.lang.annotation.*;
  * @Date 2019/4/30/030 18:07
  * @Version 1.0
  */
-@Target({ElementType.PARAMETER, ElementType.METHOD})
+@Target({ElementType.PARAMETER , ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Servicelock {
-    String description()  default "";
+    String description() default "";
 }

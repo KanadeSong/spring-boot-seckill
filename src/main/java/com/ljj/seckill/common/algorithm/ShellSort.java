@@ -14,7 +14,7 @@ public class ShellSort {
      * 另外 Shellsort 是快速、易于理解和易于实现的。 然而，其复杂度分析有点复杂。
      */
     public static void main(String[] args) {
-        int[] list = {27 , 76 , 47 , 23 , 7 , 32 , 19 , 86};
+        int[] list = {19 , 32 , 86};
         System.out.println("************希尔排序************");
         System.out.println("排序前：");
         display(list);

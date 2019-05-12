@@ -15,7 +15,7 @@ public class QuickSort {
      * 整个排序过程可以递归进行，以此达到整个数据变成有序序列。
      */
     public static void main(String[] args) {
-        int[] list = {6 , 1 , 2 , 7 , 9 , 3 , 4 , 5 , 10 , 8};
+        int[] list = {9	,7,8};
         System.out.println("************快速排序************");
         System.out.println("排序前：");
         display(list);
@@ -36,7 +36,6 @@ public class QuickSort {
             quickSort(list , left , point - 1);
             // 递归调用，对右子数组进行快速排序
             quickSort(list , point + 1 , right);
-
         }
     }
 
@@ -78,9 +77,9 @@ public class QuickSort {
     private static void display(int[] list) {
         if (list != null && list.length > 0) {
             for (int num : list) {
-                System.out.println(num + "");
+                System.out.print(num + "");
             }
-            System.out.println("");
+            System.out.print("");
         }
     }
 }

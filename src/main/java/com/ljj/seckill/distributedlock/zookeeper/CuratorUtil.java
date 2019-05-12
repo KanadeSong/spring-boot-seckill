@@ -5,6 +5,7 @@ import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.locks.InterProcessMutex;
 import org.apache.curator.retry.ExponentialBackoffRetry;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -20,7 +21,8 @@ import java.util.concurrent.TimeUnit;
  * @Version 1.0
  */
 public class CuratorUtil {
-    private static String address = "192.168.1.180:2181";
+    @Value("${distributedlock.zookeeper.CuratorUtil.address}")
+    private static String address;
 
     public static void main(String[] args) {
         //1、重试策略：初试时间为1s 重试3次
